@@ -1,7 +1,7 @@
 [package]
-name = "ansi-to-tui"
-version = "0.5.1"
-authors = ["Uttarayan Mondal <uttarayan21@gmail.com>"]
+name = "ansi-to-tui-forked"
+version = "0.5.2-fix.offset"
+authors = ["Uttarayan Mondal <uttarayan21@gmail.com>", "Arijit Basu <hi@arijitbasu.in>"]
 edition = "2018"
 description = "A library to convert ansi color coded text into tui::text::Text type from tui-rs library"
 keywords = ["ansi", "ascii", "tui", "parser"]
@@ -15,11 +15,11 @@ exclude = [
 ]
 
 [dependencies]
-simdutf8 = { version = "0.1.1", optional = true }
-tui = { version = "0.17.0", default-features = false }
+simdutf8 = { version = "0.1.4", optional = true }
+tui = { version = "0.18.0", default-features = false }
 
 [dev-dependencies]
-anyhow = "1.0.40"
+anyhow = "1.0.57"
 pretty_assertions = "1.2.1"
 
 [features]

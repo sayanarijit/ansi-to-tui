@@ -17,13 +17,13 @@
 //! The argument to the function `ansi_to_text` implements `IntoIterator` so it will be consumed on
 //! use.
 //! ```rust
-//! use ansi_to_tui::ansi_to_text;
+//! use ansi_to_tui_forked::ansi_to_text;
 //! let bytes = b"\x1b[38;2;225;192;203mAAAAA\x1b[0m".to_owned().to_vec();
 //! let text = ansi_to_text(bytes).unwrap();
 //! ```
 //! Example parsing from a file.
 //! ```rust
-//! use ansi_to_tui::ansi_to_text;
+//! use ansi_to_tui_forked::ansi_to_text;
 //! use std::io::Read;
 //!
 //! let file = std::fs::File::open("text.ascii");

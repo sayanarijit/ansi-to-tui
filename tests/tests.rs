@@ -1,4 +1,4 @@
-use ansi_to_tui::{ansi_to_text, ansi_to_text_override_style};
+use ansi_to_tui_forked::{ansi_to_text, ansi_to_text_override_style};
 use pretty_assertions::assert_eq;
 use tui::style::{Color, Modifier, Style};
 use tui::text::{Span, Spans, Text};

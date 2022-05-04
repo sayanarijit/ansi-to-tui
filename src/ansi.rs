@@ -12,13 +12,13 @@ use tui::{
 ///
 /// Example
 /// ```rust
-/// use ansi_to_tui::ansi_to_text;
+/// use ansi_to_tui_forked::ansi_to_text;
 /// let bytes : Vec<u8> = vec![b'\x1b', b'[', b'3', b'1', b'm', b'A', b'A', b'A', b'\x1b', b'[', b'0'];
 /// let text = ansi_to_text(bytes);
 /// ```
 /// Example parsing from a file.
 /// ```rust
-/// use ansi_to_tui::ansi_to_text;
+/// use ansi_to_tui_forked::ansi_to_text;
 /// use std::io::Read;
 ///
 /// let mut file = std::fs::File::open("ascii/text.ascii").unwrap();
