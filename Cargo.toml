@@ -1,7 +1,8 @@
 [package]
-name = "ansi-to-tui"
-version = "3.0.0"
-authors = ["Uttarayan Mondal <email@uttarayan.me>"]
+name = "ansi-to-tui-forked"
+version = "3.0.0-ratatui"
+authors = ["Uttarayan Mondal <uttarayan21@gmail.com>", "Arijit Basu <hi@arijitbasu.in>"]
+
 edition = "2018"
 description = "A library to convert ansi color coded text into ratatui::text::Text type from ratatui library"
 keywords = ["ansi", "ascii", "tui", "parser"]
