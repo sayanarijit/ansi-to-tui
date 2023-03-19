@@ -1,5 +1,5 @@
-// use ansi_to_tui::{ansi_to_text, ansi_to_text_override_style};
-use ansi_to_tui::IntoText;
+// use ansi_to_tui_forked::{ansi_to_text, ansi_to_text_override_style};
+use ansi_to_tui_forked::IntoText;
 use tui::{
     style::{Color, Style},
     text::{Span, Spans, Text},
@@ -29,7 +29,7 @@ use tui::{
 
 #[test]
 fn test_string() {
-    use ansi_to_tui::IntoText;
+    use ansi_to_tui_forked::IntoText;
     let string: Vec<u8> = "FOO".to_string().bytes().collect();
     println!("{:?}", string.into_text().unwrap());
 }
@@ -171,7 +171,7 @@ fn test_malformed_complex() {
     assert_eq!(bytes.into_text(), output);
 }
 
-fn some_text(s: &'static str) -> Result<Text<'static>, ansi_to_tui::Error> {
+fn some_text(s: &'static str) -> Result<Text<'static>, ansi_to_tui_forked::Error> {
     Ok(Text {
         lines: vec![Spans(vec![Span {
             content: s.into(),
@@ -185,7 +185,7 @@ fn empty_span() {
     let bytes: Vec<u8> = b"\x1b[33m\x1b[31m\x1b[32mHello\x1b[0mWorld".to_vec();
     let output = Ok(Text::from(Spans::from(vec![
         Span::styled("", Style::default().fg(Color::Yellow)), // Not sure whether to keep this or
-                                                              // remove it somehow
+        // remove it somehow
         Span::styled("Hello", Style::default().fg(Color::Green)),
         Span::styled("World", Style::default()),
     ])));
